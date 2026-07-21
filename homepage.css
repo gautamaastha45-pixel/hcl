@@ -1,0 +1,193 @@
+/* ============================================
+   HumanCentric Labs — Homepage-Specific Styles
+   ============================================ */
+
+/* ---- MODEL FLOW DIAGRAM ---- */
+.model-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-8);
+  background: var(--color-bg-warm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.model-flow__step {
+  text-align: center;
+  padding: var(--space-5) var(--space-8);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 280px;
+  transition: border-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out),
+              transform var(--duration-normal) var(--ease-out);
+}
+
+.model-flow__step:hover {
+  border-color: var(--color-sage-200);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.model-flow__step--active {
+  border-color: var(--color-sage-300);
+  background: var(--color-sage-50);
+}
+
+.model-flow__step--highlight {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.model-flow__step--highlight .model-flow__label,
+.model-flow__step--highlight .model-flow__desc {
+  color: var(--color-text-inverse);
+}
+
+.model-flow__icon {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-sage-400);
+}
+
+.model-flow__step--highlight .model-flow__icon {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.model-flow__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.model-flow__desc {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--tracking-wide);
+}
+
+.model-flow__connector {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-1) 0;
+}
+
+
+/* ---- AUDIENCE GRID ---- */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.audience-item {
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-bg-warm);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.audience-item:hover {
+  border-color: var(--color-sage-200);
+  box-shadow: var(--shadow-sm);
+}
+
+.audience-item__role {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.audience-item__context {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: var(--tracking-wide);
+}
+
+
+/* ---- HOMEPAGE HERO REFINEMENTS ---- */
+.home-hero {
+  padding-bottom: var(--space-20);
+}
+
+.home-hero .hero__title {
+  max-width: 780px;
+  font-size: clamp(2rem, 4vw, var(--text-5xl));
+}
+
+.home-hero .hero__subtitle {
+  font-size: var(--text-xl);
+  max-width: 600px;
+}
+
+.home-hero .hero__body {
+  max-width: 640px;
+}
+
+
+/* ---- WORK FRONTIER SECTION ---- */
+.wf-section {
+  border-top: 1px solid var(--color-border-light);
+}
+
+
+/* ---- CHALLENGE CONCLUSION REFINEMENT ---- */
+.challenge-conclusion {
+  line-height: var(--leading-snug);
+}
+
+
+/* ---- RESOURCE CARD WITHIN HOMEPAGE ---- */
+#resources-preview .resource-card {
+  margin-bottom: var(--space-4);
+}
+
+
+/* ---- RESPONSIVE ADJUSTMENTS ---- */
+@media (max-width: 768px) {
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .model-flow__step {
+    max-width: 100%;
+  }
+
+  .home-hero {
+    padding-top: var(--space-32);
+    padding-bottom: var(--space-16);
+  }
+
+  .home-hero .hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .home-hero .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  #final-cta .hero__actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero {
+    padding-top: var(--space-24);
+  }
+}
