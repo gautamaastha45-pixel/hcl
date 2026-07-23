@@ -77,7 +77,6 @@ function initCube() {
     const face = cubeEl.querySelector(`.rc-face--${faceName}`);
     if (!face) return;
 
-    // Shuffle stickers so they fill in a random sequence on that face
     const stickers = Array.from(face.querySelectorAll('.rc-sticker'));
     for (let i = stickers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -165,6 +164,24 @@ function initCube() {
   });
 
   steps.forEach(s => observer.observe(s));
+
+  // Hide the cube when scrolled out of the Journey section so it never overlaps other sections
+  const journeySection = document.getElementById('journey');
+  const cubeVisual = document.querySelector('.journey-visual');
+  if (journeySection && cubeVisual) {
+    const journeyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          cubeVisual.style.opacity = '1';
+          cubeVisual.style.visibility = 'visible';
+        } else {
+          cubeVisual.style.opacity = '0';
+          cubeVisual.style.visibility = 'hidden';
+        }
+      });
+    }, { threshold: 0.05 });
+    journeyObserver.observe(journeySection);
+  }
 }
 
 if (document.readyState === 'loading') {
