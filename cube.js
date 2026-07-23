@@ -1,9 +1,3 @@
-Listed directory js
-Viewed cube.js:1-163
-
-Here is the complete current code for `js/cube.js`:
-
-```javascript
 document.addEventListener('DOMContentLoaded', () => {
   const cubeEl = document.getElementById('rubiks-cube');
   const steps = document.querySelectorAll('.journey-step');
