@@ -9,10 +9,12 @@
   <meta property="og:description" content="You invested in AI. Work didn't change. We help enterprise leaders redesign how work gets done.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.humancentriclabs.io">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="base.css">
   <link rel="stylesheet" href="components.css">
@@ -20,6 +22,7 @@
   <link rel="stylesheet" href="homepage.css">
 </head>
 <body class="page-enter">
+
   <!-- ======== NAVIGATION ======== -->
   <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
@@ -29,6 +32,7 @@
           <text x="0" y="46" class="logo-text" style="font-family: 'Inter', sans-serif; font-size: 9px; font-weight: 400; letter-spacing: 2.5px; text-transform: uppercase;">HumanCentric Labs</text>
         </svg>
       </a>
+
       <ul class="nav__links" id="nav-links">
         <li class="nav__item">
           <a href="platform.html" class="nav__link">Platform</a>
@@ -56,10 +60,12 @@
           <a href="mailto:michaelgrove@humancentriclabs.io" class="nav__cta">Get in Touch</a>
         </li>
       </ul>
+
       <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav__toggle-icon"></span>
       </button>
     </div>
+
     <!-- Mobile navigation -->
     <div class="nav__mobile" id="nav-mobile">
       <a href="platform.html" class="nav__mobile-link">Platform</a>
@@ -77,6 +83,8 @@
       <a href="mailto:michaelgrove@humancentriclabs.io" class="nav__mobile-link">Contact</a>
     </div>
   </nav>
+
+
   <!-- ======== HERO ======== -->
   <section class="hero home-hero" id="hero">
     <canvas id="hero-canvas" class="hero-canvas"></canvas>
@@ -89,7 +97,7 @@
           Are you at the Work Frontier?
         </h1>
         <p class="hero__subtitle reveal reveal-delay-2">
-          Most organizations are capturing a fraction of what AI can deliver. Because work is still organized around a model built for the last century.
+          Most organizations are capturing a fraction of what AI can deliver. Not because the technology isn't ready. Because work is still organized around a model built for the last century.
         </p>
         <p class="hero__body reveal reveal-delay-3">
           We help enterprise leaders redesign how work gets done so AI investment turns into measurable business value.
@@ -100,7 +108,7 @@
         </div>
       </div>
       
-        <div class="frontier-infographic" style="text-align: center; margin: var(--space-8) auto var(--space-12); max-width: 960px; width: 100%; position: relative;">
+        <div class="frontier-infographic" style="text-align: center; margin: var(--space-6) auto 0; max-width: 960px; width: 100%; position: relative;">
           <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 30px; flex-wrap: wrap;">
             <h3 style="font-family: var(--font-heading); color: var(--color-text); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; margin: 0;">The integration of talent and AI</h3>
             <button id="magnify-btn" style="background: rgba(15, 23, 42, 0.04); border: 1px solid var(--color-border); border-radius: 20px; padding: 6px 14px; font-size: 13px; font-family: var(--font-ui); color: var(--color-text-secondary); cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s ease;" onclick="openDiagramModal()" title="Click to view larger">
@@ -133,6 +141,7 @@
                   <stop offset="100%" stop-color="#6366f1" stop-opacity="0.35" />
                 </linearGradient>
               </defs>
+
               <!-- TRACK 1: AI (TOP) -->
               <!-- Track Label -->
               <text x="35" y="70" font-size="14" font-family="var(--font-heading)" font-weight="700" fill="#06b6d4" text-anchor="end">AI</text>
@@ -152,6 +161,7 @@
               <!-- Dashed Line to 2030 -->
               <path d="M 480 68 L 710 68" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,6" stroke-linecap="round" marker-end="url(#arrow-slate)" />
               <text x="725" y="73" font-size="13" font-family="var(--font-ui)" fill="#64748b" letter-spacing="0.5">2030</text>
+
               <!-- TRACK 2: TALENT (BOTTOM) -->
               <!-- Service Model Node -->
               <text x="60" y="215" font-size="15" font-family="var(--font-heading)" font-weight="600" fill="#0f172a">Service Model</text>
@@ -179,6 +189,7 @@
               <text x="665" y="198" font-size="14" font-family="var(--font-heading)" font-weight="600" fill="#0f172a" text-anchor="middle">The Journey</text>
               <text x="665" y="216" font-size="14" font-family="var(--font-heading)" font-weight="600" fill="#0f172a" text-anchor="middle">Work Frontier</text>
               <text x="725" y="243" font-size="13" font-family="var(--font-ui)" fill="#64748b" letter-spacing="0.5">2030</text>
+
               <!-- DESTINATION (RIGHT SIDE) -->
               <!-- Smooth Converging Curved Lines -->
               <path d="M 755 68 C 785 68, 785 140, 810 140" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round" marker-end="url(#arrow-cyan)" />
@@ -197,6 +208,7 @@
             </svg>
           </div>
         </div>
+
         <!-- Diagram Lightbox Modal -->
         <div id="diagram-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(8px); z-index: 9999; justify-content: center; align-items: center; padding: 24px; box-sizing: border-box;" onclick="closeDiagramModal()">
           <div style="position: relative; width: 100%; max-width: 1100px; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);" onclick="event.stopPropagation()">
@@ -205,6 +217,7 @@
             <div id="modal-svg-target"></div>
           </div>
         </div>
+
         <script>
           function openDiagramModal() {
             const modal = document.getElementById('diagram-modal');
@@ -231,6 +244,8 @@
       </div>
     </div>
   </section>
+
+
   <!-- ======== THE GAP ======== -->
   <section class="section section--warm" id="challenge">
     <div class="container">
@@ -238,6 +253,7 @@
         <span class="section__label">The gap</span>
         <h2>You've spent millions on AI. Your board is asking one question.</h2>
       </div>
+
       <ul class="questions reveal reveal-delay-1">
         <li>Where's the business impact?</li>
         <li>Why is adoption uneven across the organization?</li>
@@ -245,6 +261,7 @@
         <li>How do we measure what AI is actually contributing?</li>
         <li>How do we organize humans and AI to work together, not separately?</li>
       </ul>
+
       <div class="reveal reveal-delay-2">
         <div class="divider"></div>
         <p class="challenge-conclusion">
@@ -254,13 +271,17 @@
       </div>
     </div>
   </section>
+
+
   <!-- ======== THE JOURNEY ======== -->
   <section class="section" id="journey">
     <div class="container">
+
       <div class="section__header reveal">
         <span class="section__label">How it works</span>
         <h2>Six problems. One operating model.</h2>
       </div>
+
       <div class="journey-layout">
         <div class="journey-mobile-progress">
           <div class="jmp-dot" id="jmp-1"></div>
@@ -270,7 +291,9 @@
           <div class="jmp-dot" id="jmp-5"></div>
           <div class="jmp-dot" id="jmp-6"></div>
         </div>
+
         <div class="journey-content">
+
           <!-- Step 1: Services -->
           <div class="journey-step" data-step="1" id="step-services">
             <span class="journey-step__number" style="color: var(--color-fw-services); background: var(--color-fw-services-light);">01</span>
@@ -292,6 +315,7 @@
               Value creation, not cost accounting, is the correct basis for resource allocation. Cost models can't compare human and AI contribution. Value-based service exchange can.
             </div>
           </div>
+
           <!-- Step 2: SMMS -->
           <div class="journey-step" data-step="2" id="step-smms">
             <span class="journey-step__number" style="color: var(--color-fw-smms); background: var(--color-fw-smms-light);">02</span>
@@ -310,6 +334,7 @@
               </p>
             </div>
           </div>
+
           <!-- Step 3: Human Equivalence -->
           <div class="journey-step" data-step="3" id="step-he">
             <span class="journey-step__number" style="color: var(--color-fw-he); background: var(--color-fw-he-light);">03</span>
@@ -325,6 +350,7 @@
               </p>
             </div>
           </div>
+
           <!-- Step 4: Talent+AI -->
           <div class="journey-step" data-step="4" id="step-talentai">
             <span class="journey-step__number" style="color: var(--color-fw-talentai); background: var(--color-fw-talentai-light);">04</span>
@@ -340,6 +366,7 @@
               </p>
             </div>
           </div>
+
           <!-- Step 5: ROTA -->
           <div class="journey-step" data-step="5" id="step-rota">
             <span class="journey-step__number" style="color: var(--color-fw-rota); background: var(--color-fw-rota-light);">05</span>
@@ -358,6 +385,7 @@
               Early adopters: 20% service value increase in the first cycle. 5-month payback. 12.9% margin contribution over 18 months.
             </div>
           </div>
+
           <!-- Step 6: HAO -->
           <div class="journey-step" data-step="6" id="step-hao">
             <span class="journey-step__number" style="color: var(--color-accent); background: var(--color-accent-lighter);">The destination</span>
@@ -376,122 +404,10 @@
               </p>
             </div>
           </div>
+
         </div>
+
         <!-- 3x3 Rubik's Cube -->
-        <div class="journey-visual">
-          <div class="rc-scene">
-            <div id="rubiks-cube"></div>
-          </div>
-        </div>
-      </div>
-      <div class="connecting-system reveal">
-        <h3>One operating model. Five connected frameworks.</h3>
-        <p>
-          Services provide the structure. SMMS™ provides the management system. Human Equivalence™ provides the common measure. Talent+AI™ provides the work unit. ROTA™ provides the financial proof. Together, they make the organization continuously adaptable.
-        </p>
-        <a href="platform.html" class="btn btn--ghost" style="margin-top: var(--space-6);">
-          Explore the full platform <span class="btn__arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- ======== TIMELINE ======== -->
-  <section class="timeline-section" id="timeline">
-    <div class="container">
-      <div class="section__header text-center reveal" style="max-width: 1000px;">
-        <span class="section__label">The timeline</span>
-        <h2>Compounding advantage starts in the first 18 months.</h2>
-      </div>
-      <div class="timeline-4step reveal reveal-delay-2" id="timeline-4step">
-        <div class="t-line-progress" id="t-line-progress"></div>
-        <div class="t-step t-step--capture">
-          <div class="t-step__time">Months 1-3</div>
-          <h3 class="t-step__title">Capture</h3>
-          <p class="t-step__desc">
-            Map enterprise services directly to customer needs and secure early wins.
-          </p>
-        </div>
-        <div class="t-step t-step--signal">
-          <div class="t-step__time">Months 2-6</div>
-          <h3 class="t-step__title">Signal</h3>
-          <p class="t-step__desc">
-            Measure the gap between your current state and expected customer value.
-          </p>
-        </div>
-        <div class="t-step t-step--improve">
-          <div class="t-step__time">Months 4-18</div>
-          <h3 class="t-step__title">Improve</h3>
-          <p class="t-step__desc">
-            Deploy integrated Talent+AI™ units to close the highest-priority gaps.
-          </p>
-        </div>
-        <div class="t-step t-step--scale">
-          <div class="t-step__time">Months 12-24</div>
-          <h3 class="t-step__title">Scale</h3>
-          <p class="t-step__desc">
-            Convert legacy corporate overhead into new margin-producing capability.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ======== SECTION 5: WHY HUMANCENTRIC LABS ======== -->
-  <section class="section section--accent" id="why-hcl">
-    <div class="container">
-      <div class="section__header reveal">
-        <span class="section__label">What we do</span>
-        <h2>Not another consultancy. An operating model.</h2>
-        <p>
-          Technology enables change. But organizations create it.
-        </p>
-      </div>
-      <div class="grid grid--3 reveal reveal-delay-1">
-        <div class="card" id="card-org-design">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-services)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
-          <h4 class="card__title">Human-centred organizational design</h4>
-          <p class="card__text">
-            Organizations redesigned around people, services, and outcomes rather than hierarchy and headcount.
-          </p>
-        </div>
-        <div class="card" id="card-ai-redesign">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-smms)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg></div>
-          <h4 class="card__title">AI-enabled work redesign</h4>
-          <p class="card__text">
-            Work structured so humans and AI create value together, not separately.
-          </p>
-        </div>
-        <div class="card" id="card-smms">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-services)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon></svg></div>
-          <h4 class="card__title">Service Model Management System (SMMS™)</h4>
-          <p class="card__text">
-            A practical operating model that enables continuous alignment between strategy, capability, and AI.
-          </p>
-        </div>
-        <div class="card" id="card-talent-ai">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-talentai)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="16" x2="12" y2="22"></line><line x1="12" y1="2" x2="12" y2="8"></line><line x1="2" y1="12" x2="8" y2="12"></line><line x1="16" y1="12" x2="22" y2="12"></line></svg></div>
-          <h4 class="card__title">Talent+AI™ integration</h4>
-          <p class="card__text">
-            A new unit of work where talent brings judgment and creativity while AI expands capability and scale.
-          </p>
-        </div>
-        <div class="card" id="card-he">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-he)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="9" cy="9" r="7"></circle><circle cx="15" cy="15" r="7"></circle></svg></div>
-          <h4 class="card__title">Human Equivalence™</h4>
-          <p class="card__text">
-            A framework for understanding how humans and AI collaborate while maintaining accountability and trust.
-          </p>
-        </div>
-        <div class="card" id="card-rota">
-          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-rota)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
-          <h4 class="card__title">ROTA™ measurement</h4>
-          <p class="card__text">
-            A new way to measure organizational performance by focusing on the return created through integrated Talent+AI™ work.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-          <!-- 3x3 Rubik's Cube -->
         <div class="journey-visual">
           <div class="rc-scene">
             <div id="rubiks-cube">
@@ -570,6 +486,127 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="connecting-system reveal">
+        <h3>One operating model. Five connected frameworks.</h3>
+        <p>
+          Services provide the structure. SMMS™ provides the management system. Human Equivalence™ provides the common measure. Talent+AI™ provides the work unit. ROTA™ provides the financial proof. Together, they make the organization continuously adaptable.
+        </p>
+        <a href="platform.html" class="btn btn--ghost" style="margin-top: var(--space-6);">
+          Explore the full platform <span class="btn__arrow">→</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======== TIMELINE ======== -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="section__header text-center reveal" style="max-width: 1000px;">
+        <span class="section__label">The timeline</span>
+        <h2>Compounding advantage starts in the first 18 months.</h2>
+      </div>
+      <div class="timeline-4step reveal reveal-delay-2" id="timeline-4step">
+        <div class="t-line-progress" id="t-line-progress"></div>
+        <div class="t-step t-step--capture">
+          <div class="t-step__time">Months 1-3</div>
+          <h3 class="t-step__title">Capture</h3>
+          <p class="t-step__desc">
+            Map enterprise services directly to customer needs and secure early wins.
+          </p>
+        </div>
+        <div class="t-step t-step--signal">
+          <div class="t-step__time">Months 2-6</div>
+          <h3 class="t-step__title">Signal</h3>
+          <p class="t-step__desc">
+            Measure the gap between your current state and expected customer value.
+          </p>
+        </div>
+        <div class="t-step t-step--improve">
+          <div class="t-step__time">Months 4-18</div>
+          <h3 class="t-step__title">Improve</h3>
+          <p class="t-step__desc">
+            Deploy integrated Talent+AI™ units to close the highest-priority gaps.
+          </p>
+        </div>
+        <div class="t-step t-step--scale">
+          <div class="t-step__time">Months 12-24</div>
+          <h3 class="t-step__title">Scale</h3>
+          <p class="t-step__desc">
+            Convert legacy corporate overhead into new margin-producing capability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== SECTION 5: WHY HUMANCENTRIC LABS ======== -->
+  <section class="section section--accent" id="why-hcl">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">What we do</span>
+        <h2>Not another consultancy. An operating model.</h2>
+        <p>
+          Technology enables change. But organizations create it.
+        </p>
+      </div>
+
+      <div class="grid grid--3 reveal reveal-delay-1">
+        <div class="card" id="card-org-design">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-services)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+          <h4 class="card__title">Human-centred organizational design</h4>
+          <p class="card__text">
+            Organizations redesigned around people, services, and outcomes rather than hierarchy and headcount.
+          </p>
+        </div>
+
+        <div class="card" id="card-ai-redesign">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-smms)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg></div>
+          <h4 class="card__title">AI-enabled work redesign</h4>
+          <p class="card__text">
+            Work structured so humans and AI create value together, not separately.
+          </p>
+        </div>
+
+        <div class="card" id="card-smms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-services)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><polygon points="12 2 22 12 12 22 2 12 12 2"></polygon></svg></div>
+          <h4 class="card__title">Service Model Management System (SMMS™)</h4>
+          <p class="card__text">
+            A practical operating model that enables continuous alignment between strategy, capability, and AI.
+          </p>
+        </div>
+
+        <div class="card" id="card-talent-ai">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-talentai)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="16" x2="12" y2="22"></line><line x1="12" y1="2" x2="12" y2="8"></line><line x1="2" y1="12" x2="8" y2="12"></line><line x1="16" y1="12" x2="22" y2="12"></line></svg></div>
+          <h4 class="card__title">Talent+AI™ integration</h4>
+          <p class="card__text">
+            A new unit of work where talent brings judgment and creativity while AI expands capability and scale.
+          </p>
+        </div>
+
+        <div class="card" id="card-he">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-he)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="9" cy="9" r="7"></circle><circle cx="15" cy="15" r="7"></circle></svg></div>
+          <h4 class="card__title">Human Equivalence™</h4>
+          <p class="card__text">
+            A framework for understanding how humans and AI collaborate while maintaining accountability and trust.
+          </p>
+        </div>
+
+        <div class="card" id="card-rota">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--color-fw-rota)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+          <h4 class="card__title">ROTA™ measurement</h4>
+          <p class="card__text">
+            A new way to measure organizational performance by focusing on the return created through integrated Talent+AI™ work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ======== SECTION 6: DESIGNED FOR ======== -->
   <section class="section" id="designed-for">
     <div class="container">
@@ -588,8 +625,9 @@
           <p style="margin-top: var(--space-6);">
             HumanCentric Labs provides the operating model to support lasting transformation.
           </p>
-          <a href="solutions.html" class="btn btn--primary" id="cta-solutions" style="margin-top: var(--space-4);">Explore Solutions</a>
+          <a href="applications.html" class="btn btn--primary" id="cta-solutions" style="margin-top: var(--space-4);">Explore Applications</a>
         </div>
+
         <div class="reveal reveal-delay-2">
           <div class="audience-grid">
             <div class="audience-item">
@@ -621,6 +659,8 @@
       </div>
     </div>
   </section>
+
+
   <!-- ======== SECTION 7: RESOURCES PREVIEW ======== -->
   <section class="section section--warm" id="resources-preview">
     <div class="container">
@@ -628,10 +668,12 @@
         <span class="section__label">Resources</span>
         <h2>Learn how organizations are preparing for the Work Frontier.</h2>
       </div>
+
       <div class="grid grid--2 reveal reveal-delay-1">
         <!-- White Papers -->
         <div>
           <h4 style="margin-bottom: var(--space-6);">White Papers</h4>
+
           <div class="resource-card" id="resource-hao-whitepaper">
             <div>
               <span class="resource-card__type">White Paper</span>
@@ -642,6 +684,7 @@
             </div>
             <a href="#" class="btn btn--secondary">Download</a>
           </div>
+
           <div class="resource-card" id="resource-learning-whitepaper">
             <div>
               <span class="resource-card__type">White Paper</span>
@@ -653,10 +696,13 @@
             <a href="#" class="btn btn--secondary">Download</a>
           </div>
         </div>
+
         <!-- Case Studies & Research -->
         <div>
           <h4 style="margin-bottom: var(--space-6);">Research and Insights</h4>
+
           <p>Explore original thinking on:</p>
+
           <div class="topic-pills">
             <span class="topic-pill">The Work Frontier</span>
             <span class="topic-pill">Talent+AI™</span>
@@ -664,6 +710,7 @@
             <span class="topic-pill">Human Equivalence™</span>
             <span class="topic-pill">AI-enabled operating models</span>
           </div>
+
           <div style="margin-top: var(--space-10);">
             <h4 style="margin-bottom: var(--space-6);">Case Studies</h4>
             <p>
@@ -677,15 +724,17 @@
       </div>
     </div>
   </section>
+
+
   <!-- ======== FINAL CTA ======== -->
   <section class="cta-section cta-section--dark" id="final-cta">
     <div class="container">
       <div class="reveal">
         <h2 class="cta-section__title">
-          AI is ready. The question is are you?
+          AI is ready. The question is whether your organization is designed for it.
         </h2>
         <p class="cta-section__text">
-          We help you redesign how work gets done in practice.
+          We help you redesign how work gets done. Not in theory. In practice.
         </p>
         <div class="hero__actions" style="justify-content: center;">
           <a href="mailto:michaelgrove@humancentriclabs.io" class="btn btn--inverse btn--lg" id="cta-final">Talk to Us</a>
@@ -696,6 +745,8 @@
       </div>
     </div>
   </section>
+
+
   <!-- ======== FOOTER ======== -->
   <footer class="footer" id="site-footer">
     <div class="container">
@@ -709,6 +760,7 @@
             The operating model for the AI era.
           </p>
         </div>
+
         <div>
           <h6 class="footer__heading">Platform</h6>
           <ul class="footer__links">
@@ -719,6 +771,7 @@
             <li><a href="platform.html#rota" class="footer__link">ROTA™</a></li>
           </ul>
         </div>
+
         <div>
           <h6 class="footer__heading">Applications</h6>
           <ul class="footer__links">
@@ -728,6 +781,7 @@
             <li><a href="applications.html#coming-soon" class="footer__link">For Operations</a></li>
           </ul>
         </div>
+
         <div>
           <h6 class="footer__heading">Company</h6>
           <ul class="footer__links">
@@ -738,6 +792,7 @@
           </ul>
         </div>
       </div>
+
       <div class="footer__bottom">
         <span class="footer__copyright">© 2025 HumanCentric Labs. All rights reserved.</span>
         <div class="footer__legal">
@@ -747,6 +802,7 @@
       </div>
     </div>
   </footer>
+
   <script src="cube.js"></script>
   <script src="main.js"></script>
   <script src="particles.js"></script>
