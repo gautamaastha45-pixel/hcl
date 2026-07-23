@@ -2,14 +2,11 @@
    HumanCentric Labs — Main JavaScript
    Interactions, scroll reveals, navigation
    ============================================ */
-
 (function () {
   'use strict';
-
   // ---- NAVIGATION SCROLL STATE ----
   const nav = document.getElementById('main-nav');
   let lastScroll = 0;
-
   function handleNavScroll() {
     const currentScroll = window.pageYOffset;
     if (currentScroll > 40) {
@@ -19,14 +16,10 @@
     }
     lastScroll = currentScroll;
   }
-
   window.addEventListener('scroll', handleNavScroll, { passive: true });
-
-
   // ---- MOBILE NAVIGATION ----
   const navToggle = document.getElementById('nav-toggle');
   const navMobile = document.getElementById('nav-mobile');
-
   if (navToggle && navMobile) {
     navToggle.addEventListener('click', function () {
       const isOpen = navMobile.classList.contains('is-open');
@@ -35,7 +28,6 @@
       navToggle.setAttribute('aria-expanded', !isOpen);
       document.body.style.overflow = isOpen ? '' : 'hidden';
     });
-
     // Close mobile nav when clicking a link
     const mobileLinks = navMobile.querySelectorAll('.nav__mobile-link');
     mobileLinks.forEach(function (link) {
@@ -47,15 +39,11 @@
       });
     });
   }
-
-
   // ---- SCROLL REVEAL ----
   const revealElements = document.querySelectorAll('.reveal');
-
   function checkReveals() {
     const windowHeight = window.innerHeight;
     const triggerPoint = windowHeight * 0.88;
-
     revealElements.forEach(function (el) {
       const elementTop = el.getBoundingClientRect().top;
       if (elementTop < triggerPoint) {
@@ -63,10 +51,8 @@
       }
     });
   }
-
   // Initial check
   checkReveals();
-
   // Throttled scroll handler
   let ticking = false;
   window.addEventListener('scroll', function () {
@@ -78,12 +64,9 @@
       ticking = true;
     }
   }, { passive: true });
-
-
   // ---- ACTIVE NAV LINK ----
   const navLinks = document.querySelectorAll('.nav__link');
   const currentPath = window.location.pathname;
-
   navLinks.forEach(function (link) {
     const href = link.getAttribute('href');
     if (href && currentPath.includes(href) && href !== '/') {
@@ -93,8 +76,6 @@
       // No active state on homepage nav
     }
   });
-
-
   // ---- SMOOTH SCROLL FOR ANCHOR LINKS ----
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
@@ -112,8 +93,6 @@
       }
     });
   });
-
-
   // ---- INTERSECTION OBSERVER FOR STATS ANIMATION ----
   const statNumbers = document.querySelectorAll('.stat__number[data-value]');
   if (statNumbers.length > 0) {
@@ -125,31 +104,25 @@
         }
       });
     }, { threshold: 0.5 });
-
     statNumbers.forEach(function (stat) {
       statsObserver.observe(stat);
     });
   }
-
   function animateNumber(el) {
     const target = parseInt(el.getAttribute('data-value'), 10);
     const suffix = el.getAttribute('data-suffix') || '';
     const duration = 1500;
     const startTime = performance.now();
-
     function update(currentTime) {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = Math.round(target * eased);
       el.textContent = current + suffix;
-
       if (progress < 1) {
         requestAnimationFrame(update);
       }
     }
-
     requestAnimationFrame(update);
   }
-
 })();
