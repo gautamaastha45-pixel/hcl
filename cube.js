@@ -27,6 +27,8 @@ function initCube() {
   const SIZE = 180;
   
   function buildCube() {
+    if (cubeEl.children.length >= 6) return; // Already rendered in HTML
+
     cubeEl.innerHTML = '';
     cubeEl.style.width = SIZE + 'px';
     cubeEl.style.height = SIZE + 'px';
@@ -41,7 +43,7 @@ function initCube() {
       for (let row = 0; row < 3; row++) {
         for (let col = 0; col < 3; col++) {
           const sticker = document.createElement('div');
-          // Front face (Step 1) is pre-colored right away
+          // Front face (Step 1) is filled right away
           if (faceName === 'front') {
             sticker.className = 'rc-sticker rc-sticker--filled';
             sticker.style.backgroundColor = COLORS.services;
@@ -75,6 +77,7 @@ function initCube() {
     const face = cubeEl.querySelector(`.rc-face--${faceName}`);
     if (!face) return;
 
+    // Shuffle stickers so they fill in a random sequence on that face
     const stickers = Array.from(face.querySelectorAll('.rc-sticker'));
     for (let i = stickers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
