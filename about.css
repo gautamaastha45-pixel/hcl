@@ -1,25 +1,20 @@
 /* ============================================
    HumanCentric Labs — About Page Styles
    ============================================ */
-
 /* ---- ABOUT HERO ---- */
 .about-hero {
   background: linear-gradient(180deg, var(--color-bg-warm) 0%, var(--color-bg) 100%);
   border-bottom: 1px solid var(--color-border-light);
 }
-
 .about-hero .hero__title {
   max-width: 640px;
 }
-
-
 /* ---- THINKING CARDS ---- */
 .thinking-cards {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
 }
-
 .thinking-card {
   padding: var(--space-6) var(--space-8);
   background: var(--color-bg);
@@ -28,12 +23,10 @@
   transition: border-color var(--duration-normal) var(--ease-out),
               box-shadow var(--duration-normal) var(--ease-out);
 }
-
 .thinking-card:hover {
   border-color: var(--color-sage-200);
   box-shadow: var(--shadow-sm);
 }
-
 .thinking-card__label {
   display: block;
   font-family: var(--font-ui);
@@ -44,7 +37,6 @@
   color: var(--color-accent);
   margin-bottom: var(--space-3);
 }
-
 .thinking-card__text {
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -52,14 +44,11 @@
   line-height: var(--leading-normal);
   margin-bottom: 0;
 }
-
-
 /* ---- MISSION PILLARS ---- */
 .mission-pillar {
   text-align: center;
   padding: var(--space-8);
 }
-
 .mission-pillar__title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
@@ -67,21 +56,17 @@
   color: var(--color-text);
   margin-bottom: var(--space-4);
 }
-
 .mission-pillar__text {
   font-size: var(--text-base);
   color: var(--color-text-secondary);
   line-height: var(--leading-normal);
 }
-
-
 /* ---- IP GRID ---- */
 .ip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-4);
 }
-
 .ip-item {
   padding: var(--space-6) var(--space-8);
   background: var(--color-bg);
@@ -91,13 +76,11 @@
               box-shadow var(--duration-normal) var(--ease-out),
               transform var(--duration-normal) var(--ease-out);
 }
-
 .ip-item:hover {
   border-color: var(--color-sage-200);
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
-
 .ip-item__badge {
   display: inline-block;
   font-family: var(--font-ui);
@@ -111,7 +94,6 @@
   border-radius: var(--radius-sm);
   margin-bottom: var(--space-4);
 }
-
 .ip-item__title {
   font-family: var(--font-heading);
   font-size: var(--text-lg);
@@ -120,14 +102,12 @@
   margin-bottom: var(--space-3);
   line-height: var(--leading-snug);
 }
-
 .ip-item__text {
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
   line-height: var(--leading-normal);
   margin-bottom: var(--space-4);
 }
-
 .ip-item__link {
   display: inline-flex;
   align-items: center;
@@ -139,50 +119,38 @@
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-out);
 }
-
 .ip-item__link:hover {
   color: var(--color-accent-dark);
 }
-
 .ip-item__link .btn__arrow {
   transition: transform var(--duration-fast) var(--ease-out);
 }
-
 .ip-item__link:hover .btn__arrow {
   transform: translateX(4px);
 }
-
 @media (max-width: 1024px) {
   .ip-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 768px) {
   .ip-grid {
     grid-template-columns: 1fr;
   }
 }
-
-
 /* ---- ABOUT TIMELINE REFINEMENT ---- */
 #journey .about-timeline {
   max-width: var(--max-width-narrow);
 }
-
 #journey .about-timeline__item {
   padding-bottom: var(--space-12);
 }
-
 #journey .about-timeline__item:last-child {
   padding-bottom: 0;
 }
-
 #journey .about-timeline__text {
   line-height: var(--leading-normal);
 }
-
-
 /* ---- MISSION SECTION ---- */
 #mission h2 {
   max-width: 700px;
