@@ -1,0 +1,103 @@
+/* ============================================
+   HumanCentric Labs — Applications Page Styles
+   ============================================ */
+
+.featured-app-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.featured-app-card:hover {
+  border-color: var(--color-sage-200);
+  box-shadow: var(--shadow-md);
+}
+
+.featured-app-card__lead {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-4);
+}
+
+.featured-app-card__actions {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.insight__list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0 0;
+}
+
+.insight__list li {
+  position: relative;
+  padding-left: var(--space-6);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+.insight__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.app-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.app-card__badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-warm);
+  border: 1px solid var(--color-border-light);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.app-card__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-3);
+}
+
+.app-card__text {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
