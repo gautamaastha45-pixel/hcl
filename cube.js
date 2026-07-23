@@ -1,3 +1,6 @@
+git add js/cube.js
+git commit -m "Fix DOMContentLoaded readyState execution bug in cube.js"
+git push origin main
 document.addEventListener('DOMContentLoaded', () => {
   const cubeEl = document.getElementById('rubiks-cube');
   const steps = document.querySelectorAll('.journey-step');
