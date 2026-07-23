@@ -7,7 +7,7 @@
   border-bottom: 1px solid var(--color-border-light);
 }
 .about-hero .hero__title {
-  max-width: 640px;
+  max-width: 1000px;
 }
 /* ---- THINKING CARDS ---- */
 .thinking-cards {
@@ -65,16 +65,17 @@
 .ip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 .ip-item {
-  padding: var(--space-6) var(--space-8);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: border-color var(--duration-normal) var(--ease-out),
-              box-shadow var(--duration-normal) var(--ease-out),
-              transform var(--duration-normal) var(--ease-out);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
 }
 .ip-item:hover {
   border-color: var(--color-sage-200);
@@ -155,4 +156,81 @@
 #mission h2 {
   max-width: 700px;
   font-size: var(--text-3xl);
+}
+/* ---- LEADERSHIP & ADVISORY ---- */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+.leadership-card {
+  display: flex;
+  flex-direction: column;
+}
+.leadership-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+.leadership-card__role {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+.leadership-card__bio {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+.advisory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+.advisory-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.advisory-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+.advisory-card__role {
+  font-family: var(--font-ui);
+  font-size: var(--text-sm);
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+  display: block;
+}
+.advisory-card__quote {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  line-height: var(--leading-normal);
+  margin-bottom: 0;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .leadership-grid {
+    grid-template-columns: 1fr;
+  }
+  .advisory-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .advisory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
