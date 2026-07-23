@@ -1,7 +1,4 @@
-git add js/cube.js
-git commit -m "Fix DOMContentLoaded readyState execution bug in cube.js"
-git push origin main
-document.addEventListener('DOMContentLoaded', () => {
+function initCube() {
   const cubeEl = document.getElementById('rubiks-cube');
   const steps = document.querySelectorAll('.journey-step');
   const mobileDots = document.querySelectorAll('.jmp-dot');
@@ -44,7 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let row = 0; row < 3; row++) {
         for (let col = 0; col < 3; col++) {
           const sticker = document.createElement('div');
-          sticker.className = 'rc-sticker rc-sticker--empty';
+          // Front face (Step 1) is pre-colored right away
+          if (faceName === 'front') {
+            sticker.className = 'rc-sticker rc-sticker--filled';
+            sticker.style.backgroundColor = COLORS.services;
+            sticker.style.borderColor = COLORS.services;
+          } else {
+            sticker.className = 'rc-sticker rc-sticker--empty';
+          }
           sticker.dataset.row = row;
           sticker.dataset.col = col;
           face.appendChild(sticker);
@@ -58,8 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
   buildCube();
 
   // State
-  let currentStep = 0;
-  let solvedFaces = new Set();
+  let currentStep = 1;
+  let solvedFaces = new Set(['front']);
+
+  // Initialize at step 1 by default
+  handleStep(1);
 
   function solveFace(faceName, color) {
     if (solvedFaces.has(faceName)) return;
@@ -68,14 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const face = cubeEl.querySelector(`.rc-face--${faceName}`);
     if (!face) return;
 
-    // Shuffle stickers so they fill in a random sequence on that face
     const stickers = Array.from(face.querySelectorAll('.rc-sticker'));
     for (let i = stickers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [stickers[i], stickers[j]] = [stickers[j], stickers[i]];
     }
 
-    // Wait a brief moment for the cube rotation to start before filling
     setTimeout(() => {
       stickers.forEach((s, i) => {
         setTimeout(() => {
@@ -83,13 +88,12 @@ document.addEventListener('DOMContentLoaded', () => {
           s.classList.add('rc-sticker--filled');
           s.style.backgroundColor = color;
           s.style.borderColor = color;
-        }, i * 30); // Fast fill sequence
+        }, i * 30);
       });
     }, 150); 
   }
 
   function rotateCubeTo(step) {
-    // Smooth transitions
     cubeEl.style.transition = 'transform 1.2s cubic-bezier(0.25, 1, 0.5, 1)';
     switch(step) {
       case 1:
@@ -108,10 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
         cubeEl.style.transform = 'rotateX(-15deg) rotateY(155deg)';
         break;
       case 6:
-        // Solve the last face
         solveFace('bottom', COLORS.solved);
         cubeEl.classList.add('rc-solved');
-        // Final spin animation
         setTimeout(() => {
           cubeEl.style.transition = 'transform 6s cubic-bezier(0.25, 1, 0.5, 1)';
           cubeEl.style.transform = 'rotateX(-25deg) rotateY(335deg)';
@@ -133,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
       solveFace(target, FACE_MAP[target].color);
     }
 
-    // Mobile dots update
     mobileDots.forEach((dot, i) => {
       if (i < stepIndex) {
         dot.classList.add(`active-${i + 1}`);
@@ -144,7 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const observer = new IntersectionObserver((entries) => {
-    // Find the highest visible step
     let maxVisibleStep = 0;
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -157,10 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
       handleStep(maxVisibleStep);
     }
   }, {
-    threshold: 0.5,
-    rootMargin: '-5% 0px -40% 0px'
+    threshold: 0.3,
+    rootMargin: '0px'
   });
 
   steps.forEach(s => observer.observe(s));
-});
+}
 
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initCube);
+} else {
+  initCube();
+}
