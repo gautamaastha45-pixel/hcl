@@ -160,4 +160,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   steps.forEach(s => observer.observe(s));
 });
-```
+
