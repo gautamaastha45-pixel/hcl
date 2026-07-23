@@ -2,14 +2,12 @@
    HumanCentric Labs — Design System
    Light theme, executive aesthetic
    ============================================ */
-
 /* --- Reset --- */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -17,7 +15,6 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
 /* --- Custom Properties --- */
 :root {
   /* Colors */
@@ -26,18 +23,15 @@ html {
   --color-bg-muted: #f3f1ec;
   --color-bg-accent: #eef1ef;
   --color-bg-dark: #1a1a2e;
-
   --color-text: #1a1a2e;
   --color-text-secondary: #4a4a5a;
   --color-text-tertiary: #8a8a96;
   --color-text-inverse: #ffffff;
-
   --color-accent: #5a6b5e;
   --color-accent-light: #e8ede9;
   --color-accent-lighter: #f2f5f3;
   --color-accent-dark: #3d4d40;
   --color-accent-hover: #4a5b4e;
-
   --color-sage: #6b7c6e;
   --color-sage-50: #f2f5f3;
   --color-sage-100: #e0e7e1;
@@ -49,18 +43,30 @@ html {
   --color-sage-700: #3d4d40;
   --color-sage-800: #2e3b30;
   --color-sage-900: #1f2820;
-
   --color-border: #e5e3de;
   --color-border-light: #f0eee9;
-
   --color-teal: #1a4a5a;
   --color-teal-dark: #0d2f3a;
-
+  /* Framework Colors — five-color system */
+  --color-fw-services: #1a4a5a;
+  --color-fw-services-light: #e6eef0;
+  --color-fw-services-mid: #2d6a7e;
+  --color-fw-smms: #5a6b5e;
+  --color-fw-smms-light: #e8ede9;
+  --color-fw-smms-mid: #6d8071;
+  --color-fw-he: #8a7968;
+  --color-fw-he-light: #f0ece7;
+  --color-fw-he-mid: #a0907e;
+  --color-fw-talentai: #4a5078;
+  --color-fw-talentai-light: #e8eaf0;
+  --color-fw-talentai-mid: #5d648e;
+  --color-fw-rota: #9a6a4a;
+  --color-fw-rota-light: #f2ece6;
+  --color-fw-rota-mid: #b07e5e;
   /* Typography */
   --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
   /* Font Sizes — modular scale */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -72,24 +78,20 @@ html {
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
-
   /* Font Weights */
   --weight-normal: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
-
   /* Line Heights */
   --leading-tight: 1.15;
   --leading-snug: 1.3;
   --leading-normal: 1.65;
   --leading-relaxed: 1.8;
-
   /* Letter Spacing */
   --tracking-tight: -0.025em;
   --tracking-normal: 0;
   --tracking-wide: 0.05em;
   --tracking-wider: 0.1em;
-
   /* Spacing */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
@@ -105,12 +107,10 @@ html {
   --space-24: 6rem;
   --space-32: 8rem;
   --space-40: 10rem;
-
   /* Layout */
   --max-width: 1200px;
   --max-width-narrow: 720px;
   --max-width-wide: 1400px;
-
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -118,14 +118,12 @@ html {
   --duration-normal: 300ms;
   --duration-slow: 500ms;
   --duration-slower: 800ms;
-
   /* Shadows */
   --shadow-xs: 0 1px 2px rgba(26, 26, 46, 0.03);
   --shadow-sm: 0 1px 3px rgba(26, 26, 46, 0.04), 0 1px 2px rgba(26, 26, 46, 0.03);
   --shadow-md: 0 4px 12px rgba(26, 26, 46, 0.06);
   --shadow-lg: 0 8px 30px rgba(26, 26, 46, 0.08);
   --shadow-xl: 0 20px 60px rgba(26, 26, 46, 0.1);
-
   /* Borders */
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -133,7 +131,6 @@ html {
   --radius-xl: 16px;
   --radius-2xl: 24px;
 }
-
 /* --- Global Styles --- */
 body {
   font-family: var(--font-body);
@@ -143,7 +140,6 @@ body {
   background-color: var(--color-bg);
   overflow-x: hidden;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: var(--weight-medium);
@@ -151,59 +147,48 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-text);
   letter-spacing: var(--tracking-tight);
 }
-
 h1 { font-size: var(--text-5xl); margin-bottom: var(--space-8); }
 h2 { font-size: var(--text-4xl); margin-bottom: var(--space-6); }
 h3 { font-size: var(--text-3xl); margin-bottom: var(--space-5); }
 h4 { font-size: var(--text-2xl); margin-bottom: var(--space-4); }
 h5 { font-size: var(--text-xl); margin-bottom: var(--space-3); }
 h6 { font-size: var(--text-lg); margin-bottom: var(--space-3); }
-
 p {
   margin-bottom: var(--space-6);
   color: var(--color-text-secondary);
 }
-
 p:last-child {
   margin-bottom: 0;
 }
-
 a {
   color: var(--color-accent);
   text-decoration: none;
   transition: color var(--duration-fast) var(--ease-out);
 }
-
 a:hover {
   color: var(--color-accent-dark);
 }
-
 strong {
   font-weight: var(--weight-semibold);
   color: var(--color-text);
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
 ul, ol {
   list-style: none;
 }
-
 hr {
   border: none;
   border-top: 1px solid var(--color-border);
   margin: var(--space-12) 0;
 }
-
 ::selection {
   background-color: var(--color-accent-light);
   color: var(--color-text);
 }
-
 /* --- Utility Classes --- */
 .container {
   width: 100%;
@@ -211,27 +196,21 @@ hr {
   margin: 0 auto;
   padding: 0 var(--space-8);
 }
-
 .container--narrow {
   max-width: var(--max-width-narrow);
 }
-
 .container--wide {
   max-width: var(--max-width-wide);
 }
-
 .text-center { text-align: center; }
 .text-left { text-align: left; }
-
 .text-primary { color: var(--color-text); }
 .text-secondary { color: var(--color-text-secondary); }
 .text-tertiary { color: var(--color-text-tertiary); }
 .text-accent { color: var(--color-accent); }
-
 .font-heading { font-family: var(--font-heading); }
 .font-body { font-family: var(--font-body); }
 .font-ui { font-family: var(--font-ui); }
-
 .uppercase {
   text-transform: uppercase;
   letter-spacing: var(--tracking-wider);
@@ -239,7 +218,6 @@ hr {
   font-family: var(--font-ui);
   font-weight: var(--weight-semibold);
 }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -251,7 +229,6 @@ hr {
   white-space: nowrap;
   border: 0;
 }
-
 /* --- Reveal Animation --- */
 .reveal {
   opacity: 0;
@@ -259,18 +236,15 @@ hr {
   transition: opacity var(--duration-slower) var(--ease-out),
               transform var(--duration-slower) var(--ease-out);
 }
-
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 .reveal-delay-1 { transition-delay: 100ms; }
 .reveal-delay-2 { transition-delay: 200ms; }
 .reveal-delay-3 { transition-delay: 300ms; }
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
-
 /* --- Responsive --- */
 @media (max-width: 1024px) {
   :root {
@@ -280,7 +254,6 @@ hr {
     --text-3xl: 1.625rem;
   }
 }
-
 @media (max-width: 768px) {
   :root {
     --text-6xl: 2.5rem;
@@ -289,23 +262,19 @@ hr {
     --text-3xl: 1.5rem;
     --text-2xl: 1.25rem;
   }
-
   body {
     font-size: var(--text-base);
   }
-
   .container {
     padding: 0 var(--space-6);
   }
 }
-
 @media (max-width: 480px) {
   :root {
     --text-5xl: 1.875rem;
     --text-4xl: 1.5rem;
     --text-3xl: 1.375rem;
   }
-
   .container {
     padding: 0 var(--space-4);
   }
