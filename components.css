@@ -1,3 +1,9 @@
+Viewed components.css:1-800
+Viewed components.css:801-1074
+
+Here is the full current code for `css/components.css`:
+
+```css
 /* ============================================
    HumanCentric Labs — Component Library
    ============================================ */
@@ -242,12 +248,12 @@
 
 /* ---- HERO ---- */
 .hero {
-  padding: var(--space-40) 0 var(--space-24);
+  padding: calc(var(--space-10) + 70px) 0 var(--space-12);
   position: relative;
 }
 
 .hero--compact {
-  padding: var(--space-32) 0 var(--space-16);
+  padding: calc(var(--space-6) + 70px) 0 var(--space-6);
 }
 
 .hero__label {
@@ -265,7 +271,7 @@
   font-size: var(--text-5xl);
   font-weight: var(--weight-medium);
   line-height: var(--leading-tight);
-  max-width: 800px;
+  max-width: 1000px;
   margin-bottom: var(--space-8);
 }
 
@@ -339,7 +345,7 @@
 }
 
 .section__header {
-  max-width: 640px;
+  max-width: 1000px;
   margin-bottom: var(--space-16);
 }
 
@@ -1071,3 +1077,4 @@
     gap: var(--space-4);
   }
 }
+```
